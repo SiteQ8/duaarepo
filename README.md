@@ -2,14 +2,14 @@
 
 <p align="center">
   <a href="https://siteq8.github.io/duaarepo"><img src="https://img.shields.io/badge/🚀-Live_Demo-10b981?style=flat-square" alt="Live"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Duas-58+-b8943e?style=flat-square" alt="Duas"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Categories-11-0c2e3f?style=flat-square" alt="Categories"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Duas-337+-b8943e?style=flat-square" alt="Duas"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Categories-20-0c2e3f?style=flat-square" alt="Categories"/></a>
   <a href="#"><img src="https://img.shields.io/badge/lang-AR%20%7C%20EN-3b82f6?style=flat-square" alt="Bilingual"/></a>
   <a href="#"><img src="https://img.shields.io/badge/Mobile-First-059669?style=flat-square" alt="Mobile"/></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-gold?style=flat-square" alt="License"/></a>
 </p>
 
-A comprehensive, beautifully designed collection of **58+ authentic Islamic duas** from the **Quran and Sunnah**, organized in **11 categories** with full **Arabic text, English translation, and source citations**.
+A comprehensive, beautifully designed collection of **337+ authentic Islamic duas** from the **Quran and Sunnah**, organized in **20 categories** with full **Arabic text, English translation, and source citations**.
 
 🔗 **Live:** [https://siteq8.github.io/duaarepo](https://siteq8.github.io/duaarepo)
 
@@ -34,8 +34,8 @@ A comprehensive, beautifully designed collection of **58+ authentic Islamic duas
 
 ## ✨ Features
 
-- 🤲 **58+ Authentic Duas** from Quran & Sunnah with source citations
-- 📚 **11 Categories**: Quranic, Morning Adhkar, Evening Adhkar, Daily Life, Protection (Ruqyah), Forgiveness, Praise & Dhikr, Travel, Food & Drink, Sleep, Distress
+- 🤲 **337+ Authentic Duas** from Quran & Sunnah with source citations
+- 📚 **20 Categories**: Quranic, Morning Adhkar, Evening Adhkar, Daily Life, Protection (Ruqyah), Forgiveness, Praise & Dhikr, Travel, Food & Drink, Sleep, Distress
 - 🌍 **Bilingual AR/EN** — Full Arabic text + English translation
 - ✨ **Daily Dua** — Different dua each day, cycling through the collection
 - ❤️ **Favorites** — Save & access your favorite duas (localStorage)

@@ -138,7 +138,7 @@ pointer-events:none}
     <div class="header">
         <div class="header-icon">🤲</div>
         <h1>مجموعة الأدعية</h1>
-        <div class="header-sub">Authentic Dua Collection — Quran & Sunnah</div>
+        <div class="header-sub">Authentic Dua Collection — Quran, Sunnah & Hisn al-Muslim (حصن المسلم)</div>
         <div class="header-row">
             <button class="hbtn" id="lang-btn" onclick="toggleLang()">English</button>
             <button class="hbtn" id="dark-btn" onclick="toggleDark()">🌙</button>
@@ -219,6 +219,7 @@ pointer-events:none}
     </button>
 </div>
 
+<script src="hisn.js"></script>
 <script>
 // ═══════════════════════════════════════════════════════════════════
 // AUTHENTIC DUA COLLECTION — From Quran, Sahih Bukhari, Muslim,
@@ -229,16 +230,24 @@ pointer-events:none}
 const CATEGORIES = [
     {id:'all',ar:'الكل',en:'All',icon:'📿'},
     {id:'quran',ar:'أدعية قرآنية',en:'Quranic Duas',icon:'📖'},
-    {id:'morning',ar:'أذكار الصباح',en:'Morning Adhkar',icon:'🌅'},
-    {id:'evening',ar:'أذكار المساء',en:'Evening Adhkar',icon:'🌙'},
+    {id:'morning',ar:'أذكار الصباح والمساء',en:'Morning & Evening',icon:'🌅'},
+    {id:'prayer',ar:'أدعية الصلاة',en:'Prayer',icon:'🕌'},
     {id:'daily',ar:'أدعية يومية',en:'Daily Life',icon:'🕐'},
+    {id:'sleep',ar:'النوم',en:'Sleep',icon:'😴'},
+    {id:'waking',ar:'الاستيقاظ',en:'Waking Up',icon:'⏰'},
     {id:'protection',ar:'حماية ورقية',en:'Protection',icon:'🛡️'},
     {id:'forgiveness',ar:'استغفار وتوبة',en:'Forgiveness',icon:'🤲'},
-    {id:'praise',ar:'حمد وثناء',en:'Praise & Dhikr',icon:'✨'},
+    {id:'praise',ar:'تسبيح وذكر',en:'Praise & Dhikr',icon:'✨'},
+    {id:'distress',ar:'الكرب والهم',en:'Distress & Worry',icon:'💚'},
     {id:'travel',ar:'السفر',en:'Travel',icon:'✈️'},
-    {id:'food',ar:'الطعام',en:'Food & Drink',icon:'🍽️'},
-    {id:'sleep',ar:'النوم',en:'Sleep',icon:'😴'},
-    {id:'distress',ar:'الكرب والهم',en:'Distress',icon:'💚'},
+    {id:'food',ar:'الطعام والشراب',en:'Food & Drink',icon:'🍽️'},
+    {id:'sickness',ar:'المرض والعيادة',en:'Sickness',icon:'🏥'},
+    {id:'death',ar:'الميت والجنازة',en:'Death & Funeral',icon:'🕊️'},
+    {id:'weather',ar:'الطقس',en:'Weather',icon:'🌧️'},
+    {id:'fasting',ar:'الصيام',en:'Fasting',icon:'🌙'},
+    {id:'occasions',ar:'مناسبات',en:'Occasions',icon:'🎊'},
+    {id:'hajj',ar:'الحج والعمرة',en:'Hajj & Umrah',icon:'🕋'},
+    {id:'faith',ar:'الإيمان',en:'Faith',icon:'💡'},
 ];
 
 const DUAS = [
@@ -323,6 +332,20 @@ const DUAS = [
 {cat:'distress',ar:'فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ إِنَّ مَعَ الْعُسْرِ يُسْرًا',en:'Indeed, with hardship comes ease. Indeed, with hardship comes ease.',src:'الشرح 94:5-6'},
 ];
 
+// Merge Hisn al-Muslim duas (from hisn.js) with inline bilingual duas
+// Inline DUAS have full Arabic + English. HISN_DUAS have Arabic + occasion + source.
+if (typeof HISN_DUAS !== 'undefined' && Array.isArray(HISN_DUAS)) {
+    HISN_DUAS.forEach(d => {
+        DUAS.push({
+            cat: d.cat,
+            ar: d.ar,
+            en: d.occasion_ar || '', // Use occasion as hint (Arabic-only from Hisn al-Muslim)
+            src: d.src || 'حصن المسلم',
+            occasion: d.occasion_ar || ''
+        });
+    });
+}
+
 // ═══════════════════════════════════════════════════════════════
 // APP LOGIC
 // ═══════════════════════════════════════════════════════════════
@@ -390,11 +413,13 @@ function renderDuas() {
     el.innerHTML = filtered.map((d, i) => {
         const globalIdx = DUAS.indexOf(d);
         const isFav = favorites.includes(globalIdx);
+        const hasEn = d.en && !d.occasion; // Real English translation (not occasion hint)
+        const occasionLabel = d.occasion ? `<div style="text-align:center;font-size:0.75rem;color:var(--gold);font-weight:600;margin-bottom:8px">📌 ${d.occasion}</div>` : '';
         return `<div class="dua-card">
             <div class="dua-num">${i+1}</div>
+            ${occasionLabel}
             <div class="dua-ar">${d.ar}</div>
-            <div class="dua-divider"></div>
-            <div class="dua-en">${d.en}</div>
+            ${hasEn ? `<div class="dua-divider"></div><div class="dua-en">${d.en}</div>` : ''}
             <div class="dua-source"><span class="dua-source-icon">📚</span> ${d.src}</div>
             <div class="dua-actions">
                 <button class="dua-btn ${isFav?'fav-active':''}" onclick="toggleFav(${globalIdx})">❤️</button>
@@ -424,11 +449,13 @@ function renderFavorites() {
     el.innerHTML = favorites.map((idx, i) => {
         const d = DUAS[idx];
         if (!d) return '';
+        const hasEn = d.en && !d.occasion;
+        const occasionLabel = d.occasion ? `<div style="text-align:center;font-size:0.75rem;color:var(--gold);font-weight:600;margin-bottom:8px">📌 ${d.occasion}</div>` : '';
         return `<div class="dua-card">
             <div class="dua-num">${i+1}</div>
+            ${occasionLabel}
             <div class="dua-ar">${d.ar}</div>
-            <div class="dua-divider"></div>
-            <div class="dua-en">${d.en}</div>
+            ${hasEn ? `<div class="dua-divider"></div><div class="dua-en">${d.en}</div>` : ''}
             <div class="dua-source"><span class="dua-source-icon">📚</span> ${d.src}</div>
             <div class="dua-actions">
                 <button class="dua-btn fav-active" onclick="toggleFav(${idx});renderFavorites()">❤️</button>
