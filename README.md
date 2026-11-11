@@ -1,4 +1,4 @@
-# 🤲 مجموعة الأدعية | Dua Collection
+# مجموعة الأدعية | Dua Collection
 
 <p align="center">
   <a href="https://siteq8.github.io/duaarepo"><img src="https://img.shields.io/badge/🚀-Live_Demo-10b981?style=flat-square" alt="Live"/></a>
@@ -15,7 +15,7 @@ A comprehensive, beautifully designed collection of **337+ authentic Islamic dua
 
 ---
 
-## 📋 Dua Sources & Authentication
+## Dua Sources & Authentication
 
 > **Every dua in this collection includes its source citation. All duas are from authenticated Islamic references.**
 
@@ -32,25 +32,25 @@ A comprehensive, beautifully designed collection of **337+ authentic Islamic dua
 
 ---
 
-## ✨ Features
+## Features
 
-- 🤲 **337+ Authentic Duas** from Quran & Sunnah with source citations
-- 📚 **20 Categories**: Quranic, Morning Adhkar, Evening Adhkar, Daily Life, Protection (Ruqyah), Forgiveness, Praise & Dhikr, Travel, Food & Drink, Sleep, Distress
-- 🌍 **Bilingual AR/EN** — Full Arabic text + English translation
-- ✨ **Daily Dua** — Different dua each day, cycling through the collection
-- ❤️ **Favorites** — Save & access your favorite duas (localStorage)
-- 🔍 **Search** — Real-time search across Arabic, English, and sources
-- 🏷️ **Category Filter** — Scrollable pill navigation with counts
-- 📋 **Copy & Share** — One-tap copy or Web Share API
-- 🌙 **Dark Mode** — Toggle with localStorage persistence
-- 📱 **Mobile-First** — Optimized for phones, works on all screens
-- 🕌 **Islamic Geometric Patterns** — Subtle SVG background & header decorations
-- ⚡ **Zero Dependencies** — Pure HTML/CSS/JS, no build tools
-- 🎨 **Luxury Design** — Amiri + Noto Naskh Arabic fonts, teal/gold palette
+- **337+ Authentic Duas** from Quran & Sunnah with source citations
+- **20 Categories**: Quranic, Morning Adhkar, Evening Adhkar, Daily Life, Protection (Ruqyah), Forgiveness, Praise & Dhikr, Travel, Food & Drink, Sleep, Distress
+- **Bilingual AR/EN**: Full Arabic text + English translation
+- **Daily Dua**: Different dua each day, cycling through the collection
+- **Favorites**: Save & access your favorite duas (localStorage)
+- **Search**: Real-time search across Arabic, English, and sources
+- **Category Filter**: Scrollable pill navigation with counts
+- **Copy & Share**: One-tap copy or Web Share API
+- **Dark Mode**: Toggle with localStorage persistence
+- **Mobile-First**: Optimized for phones, works on all screens
+- **Islamic Geometric Patterns**: Subtle SVG background & header decorations
+- **Zero Dependencies**: Pure HTML/CSS/JS, no build tools
+- **Luxury Design**: Amiri + Noto Naskh Arabic fonts, teal/gold palette
 
 ---
 
-## 📂 Categories
+## Categories
 
 | # | Category | AR | Duas |
 |---|----------|-----|------|
@@ -68,7 +68,7 @@ A comprehensive, beautifully designed collection of **337+ authentic Islamic dua
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### GitHub Pages
 1. Fork → Settings → Pages → `main` branch, `/docs` folder
@@ -82,27 +82,27 @@ open duaarepo/docs/index.html
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-Contributions welcome — especially:
-- 📝 **More duas** with authenticated sources
-- 🌐 **Additional languages** (Urdu, French, Turkish, Malay, Indonesian)
-- ♿ **Accessibility** improvements
-- 🔊 **Audio** recitation
-- 📖 **Tafsir/explanation** for Quranic duas
+Contributions welcome, especially:
+- **More duas** with authenticated sources
+- **Additional languages** (Urdu, French, Turkish, Malay, Indonesian)
+- **Accessibility** improvements
+- **Audio** recitation
+- **Tafsir/explanation** for Quranic duas
 
 **Important:** All submitted duas must include source citations from authenticated Islamic references.
 
 ---
 
-## 📄 License
+## License
 
-MIT License — see [LICENSE](LICENSE).
+MIT License, see [LICENSE](LICENSE).
 
 ---
 
 <p align="center">
   <sub>بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</sub><br>
-  <sub>Built by <a href="https://github.com/SiteQ8">@SiteQ8</a> — Ali AlEnezi 🇰🇼</sub><br>
-  <sub>"وَقَالَ رَبُّكُمُ ادْعُونِي أَسْتَجِبْ لَكُمْ" — غافر 40:60</sub>
+  <sub>Built by <a href="https://github.com/SiteQ8">@SiteQ8</a>, Ali AlEnezi 🇰🇼</sub><br>
+  <sub>"وَقَالَ رَبُّكُمُ ادْعُونِي أَسْتَجِبْ لَكُمْ"، غافر 40:60</sub>
 </p>
