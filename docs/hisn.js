@@ -1,4 +1,4 @@
-// Hisn al-Muslim — حصن المسلم من أذكار الكتاب والسنة
+// Hisn al-Muslim: حصن المسلم من أذكار الكتاب والسنة
 // Source: Sa'id bin Ali bin Wahf al-Qahtani
 // Total duas: 279
 // Auto-extracted from rn0x/hisn_almuslim_json (public domain dataset)
